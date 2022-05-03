@@ -1,0 +1,38 @@
+{
+  "name": "rusty-react-redux",
+  "version": "1.0.0",
+  "description": "A skeleton app showing how to use Rust to leverage Wasm in your React app.",
+  "main": "src/index.jsx",
+  "scripts": {
+    "build:wasm": "cargo build --target wasm32-unknown-unknown",
+    "build:bindgen": "wasm-bindgen target/wasm32-unknown-unknown/debug/rusty_react_redux.wasm --out-dir build",
+    "build": "npm run build:wasm && npm run build:bindgen && npx webpack",
+    "dev": "webpack server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/material": "^5.6.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@wasm-tool/wasm-pack-plugin": "^1.6.0",
+    "autoprefixer": "^10.4.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.3",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss-cli": "^9.0.2",
+    "tailwindcss": "^2.2.19",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.5.0"
+  }
+}
