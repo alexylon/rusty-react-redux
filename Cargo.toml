@@ -18,3 +18,4 @@ state = { version = "0.5", features = ["tls"] }
 lazy_static = "1.4"
 serde_derive = "^1.0.59"
 js-sys = "0.3.36"
+console_error_panic_hook = "0.1"

@@ -11,7 +11,7 @@ pub enum ActionType {
 
 #[derive(Deserialize)]
 pub struct AddNameAction {
-    pub id: u32,
+    // pub id: u32,
     pub first_name: String,
 }
 
